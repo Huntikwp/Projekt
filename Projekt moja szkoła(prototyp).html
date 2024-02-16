@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opis Szkoły XYZ</title>
+    <style>
+        
+        /* Style dla zakładek */
+    
+  body{
+    background-image: url(D:\Users\JAKSPUD26\Desktop\vetter.jpg
+    );
+    background-size: cover;
+    background-position: center;
+    
+  }      .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
+        }
+        .tabs {
+            overflow: hidden;
+        }
+        .tab-button {
+            background-color: #f2f2f2;
+            float: left;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        .tab-button:hover {
+            background-color: #ddd;
+        }
+        /* Style dla reszty strony */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Style dla formularza */
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Szkoła XYZ</h1>
+    </header>
+                   
+    </nav>
+    <div class="tabs">
+        <div class="tab-button" onclick="openTab(event, 'opis')">Opis</div>
+        <div class="tab-button" onclick="openTab(event, 'kadra')">Kadra Nauczycielska</div>
+        <div class="tab-button" onclick="openTab(event, 'przedmioty')">Oferta Edukacyjna</div>
+        <div class="tab-button" onclick="openTab(event, 'kontakt')">Kontakt</div>
+    </div>
+    <section id="opis" class="tab active">
+        <h2>Opis Szkoły</h2>
+       
+        <p>Tutaj umieść krótki opis szkoły, jej historię, misję i wartości.</p>
+    </section>
+    <section id="kadra" class="tab">
+        <h2>Kadra Nauczycielska</h2>
+        <p>Tutaj możesz przedstawić kadre nauczycielską, ich kwalifikacje i doświadczenie.</p>
+    </section>
+    <section id="przedmioty" class="tab">
+        <h2>Oferta Edukacyjna</h2>
+        <p>Przedstaw tutaj ofertę edukacyjną szkoły, dostępne przedmioty, kierunki, kluby, itp.</p>
+    </section>
+    <section id="kontakt" class="tab">
+        <h2>Kontakt</h2>
+        <div style="overflow-x:auto;">
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Dane Kontaktowe</th>
+                </tr>
+                <tr>
+                    <td>Adres</td>
+                    <td>ul. Szkolna 123, 00-001 Miastowo</td>
+                </tr>
+                <tr>
+                    <td>Numer Telefonu</td>
+                    <td>+48 123 456 789</td>
+                </tr>
+                <tr>
+                    <td>Adres E-mail</td>
+                    <td>kontakt@szkolaxyz.pl</td>
+                </tr>
+            </table>
+        </div>
+        <!-- Formularz kontaktowy -->
+        <form action="#" method="post">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adres e-mail:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Wyślij">
+        </form>
+    </section>
+    <footer>
+        &copy; 2024 Szkoła XYZ. Wszelkie prawa zastrzeżone.
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
